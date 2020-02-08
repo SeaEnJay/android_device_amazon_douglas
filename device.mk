@@ -1,3 +1,4 @@
+# Local Paths
 DEVICE_BASE := device/amazon/douglas
 DEVICE_VENDOR := /vendor/amazon/douglas
 
@@ -8,6 +9,7 @@ DEVICE_PACKAGE_OVERLAYS += $(DEVICE_BASE)/overlay
 PRODUCT_COPY_FILES += \
     $(DEVICE_BASE)/configs/99exfat-support:system/etc/init.d/99exfat-support
 
+# Languages
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Device uses high-density artwork where available
@@ -41,11 +43,12 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:system/etc/media_codecs_google_video_le.xml \
     $(DEVICE_BASE)/configs/media_codecs.xml:system/etc/media_codecs.xml \
     $(DEVICE_BASE)/configs/media_profiles.xml:system/etc/media_profiles.xml \
-    $(DEVICE_BASE)/configs/audio_device.xml:system/etc/audio_device.xml
+    $(DEVICE_BASE)/configs/audio_device.xml:system/etc/audio_device.xml \
+    $(DEVICE_BASE)/configs/audio_policy.conf:system/vendor/etc/audio_policy.conf
 
 # Audio
 PRODUCT_PACKAGES += \
-	audio.a2dp.default \
+    audio.a2dp.default \
     audio.r_submix.default \
     audio.usb.default \
     audio_policy.stub \
@@ -56,13 +59,13 @@ PRODUCT_PACKAGES += \
     libtinyxml \
     libaudioroute
 
-#OMX    
+# OMX    
 PRODUCT_PACKAGES += \
     libdashplayer
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-	bluetooth.default
+    bluetooth.default
 	
 # Graphics
 PRODUCT_PACKAGES += \
@@ -80,9 +83,9 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-	power.default
+    power.default
 
-# network
+# Network
 PRODUCT_PACKAGES += \
     netd
     
@@ -91,22 +94,24 @@ PRODUCT_PACKAGES += \
     ebtables \
     ethertypes
 
-
 # Zygote
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-	ro.zygote=zygote64_32
+    ro.zygote=zygote64_32
 
-
+# exFAT support
 WITH_EXFAT := true
 
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
+# Remove packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+    
+# Audio Fix
+PRODUCT_PACKAGES += \
+    audiofix \
+    libaudio_shim
 
-# Optional OTAS
-PRODUCT_PROPERTY_OVERRIDES += ro.updater.uri=https://raw.githubusercontent.com/CM12-1-Douglas/OTA_MANIFEST/master/Updater.xml
-PRODUCT_PROPERTY_OVERRIDES += ro.updater.oldrelease.url=https://raw.githubusercontent.com/CM12-1-Douglas/OtaUpdater/master/updater-old-release.json
-PRODUCT_PROPERTY_OVERRIDES += ro.rom.version=$(shell date +%Y%m%d)
-PRODUCT_PROPERTY_OVERRIDES += ro.otaupdate.enable_toast=true
-PRODUCT_PROPERTY_OVERRIDES += ro.otaupdate.enable_log=true
+# DATE
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 # call dalvik heap config
 $(call inherit-product, frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap.mk)
@@ -114,4 +119,5 @@ $(call inherit-product, frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap
 # call hwui memory config
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
 
+# call vendor blobs makefile
 $(call inherit-product-if-exists, vendor/amazon/douglas/douglas-vendor.mk)

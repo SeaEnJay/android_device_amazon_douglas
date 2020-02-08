@@ -16,6 +16,8 @@ on early-init
     chmod 0755 /sys/kernel/debug
 
 on init
+    # Audio SHIM
+    export LD_PRELOAD "libaudio_shim.so"
 
     # BATTERY proc
     chown shell system /proc/mtk_battery_cmd/current_cmd
@@ -1400,4 +1402,13 @@ service rpmb_svc /system/bin/rpmb_svc
     class main
     group system drmrpc
     disabled
+
+# Add for headphones fix
+on property:dev.bootcomplete=1
+    start audiofix
+
+service audiofix /system/xbin/audiofix
+    user root
+    group root
+    oneshot
 
