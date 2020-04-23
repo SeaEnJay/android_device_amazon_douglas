@@ -22,3 +22,7 @@ Rear Camera  | 2 MP
 </p>
 
 This branch is for building CyanogenMod 12.1/LineageOS 12.1
+
+## Building from source
+[For Build Instructions Check Here](https://github.com/mt8163/android_vendor_amazon_mt8163/blob/lineage-16.0/README.md)
+
