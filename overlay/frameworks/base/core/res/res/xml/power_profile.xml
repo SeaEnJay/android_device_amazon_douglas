@@ -10,6 +10,13 @@
     <item name="wifi.scan">75.48</item>
     <item name="dsp.audio">0.1</item>
     <item name="dsp.video">0.1</item>
+    <item name="radio.active">0.1</item>
+    <item name="radio.scanning">0.1</item>
+    <item name="gps.on">0.1</item>
+    <array name="radio.on">
+        <value>0.2</value>
+        <value>0.1</value>
+    </array>
     <array name="cpu.speeds">
         <value>598000</value>
         <value>747000</value>
@@ -28,10 +35,10 @@
     </array>
     <item name="battery.capacity">2980</item>
     <array name="wifi.batchedscan">
-        <value>.0076</value>
-        <value>.0613</value>
-        <value>.4845</value>
-        <value>3.870</value>
-        <value>30.96</value>
+        <value>.0002</value>
+        <value>.002</value>
+        <value>.02</value>
+        <value>.2</value>
+        <value>2</value>
     </array>
 </device>
