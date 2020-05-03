@@ -113,6 +113,10 @@ PRODUCT_PACKAGES += \
     libgui_shim \
     libatomic_shim
 
+# Media Extractors
+BOARD_SECCOMP_POLICY := \
+    $(DEVICE_BASE)/seccomp-policy
+
 # DATE
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
