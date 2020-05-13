@@ -5,10 +5,6 @@ DEVICE_VENDOR := /vendor/amazon/douglas
 # Device overlay
 DEVICE_PACKAGE_OVERLAYS += $(DEVICE_BASE)/overlay
 
-# Install init.d scripts
-PRODUCT_COPY_FILES += \
-    $(DEVICE_BASE)/configs/99exfat-support:system/etc/init.d/99exfat-support
-
 # Languages
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
