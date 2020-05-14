@@ -36,6 +36,14 @@ BOARD_KERNEL_BASE := 0x40080000
 BOARD_KERNEL_OFFSET := 0
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_FLASH_BLOCK_SIZE := 131072
+
+BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
+
+#TARGET_KERNEL_SOURCE := kernel/amazon/douglas
+#TARGET_KERNEL_CONFIG := douglas_defconfig
+
+#TARGET_KERNEL_CROSS_COMPILE_PREFIX := $(shell pwd)/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin/aarch64-linux-android-
+
 TARGET_USES_64_BIT_BINDER := true
 
 # GLOBAL FLAGS
@@ -133,6 +141,3 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_BASE)/recovery.fstab
 BOARD_HAS_NO_SELECT_BUTTON := true
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone2/temp
 DEVICE_RESOLUTION := 800x1280
-
-# Other stuff/MISC
-$(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
