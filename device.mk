@@ -106,10 +106,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 # exFAT support
 WITH_EXFAT := true
 
-# Remove packages
-PRODUCT_PACKAGES += \
-    RemovePackages
-    
 # Audio Fix
 PRODUCT_PACKAGES += \
     audiofix \
