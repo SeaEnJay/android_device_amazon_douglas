@@ -107,6 +107,12 @@ PRODUCT_PACKAGES += \
     audiofix \
     libaudio_shim
 
+# Shim Symbols
+PRODUCT_PACKAGES += \
+    liblog_shim \
+    libgui_shim \
+    libatomic_shim
+
 # DATE
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 

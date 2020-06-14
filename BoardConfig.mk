@@ -139,7 +139,17 @@ TARGET_OTA_ASSERT_DEVICE := douglas
 # Shim Symbols
 LINKER_FORCED_SHIM_LIBS := \
     /system/lib/liblog.so|liblog_shim.so \
-    /system/lib64/liblog.so|liblog_shim.so
+    /system/lib64/liblog.so|liblog_shim.so \
+    /system/lib/libasp.so|liblog_shim.so \
+    /system/lib64/libasp.so|liblog_shim.so
+    /system/lib/libgui_ext.so|libgui_shim.so \
+    /system/lib64/libgui_ext.so|libgui_shim.so \
+    /system/lib/libui_ext.so|libgui_shim.so \
+    /system/lib64/libui_ext.so|libgui_shim.so \
+    /system/lib/hw/hwcomposer.mt8163.so|libatomic_shim.so \
+    /system/lib64/hw/hwcomposer.mt8163.so|libatomic_shim.so \
+    /system/lib/hw/hwcomposer.mt8163.so|libgui_shim.so \
+    /system/lib64/hw/hwcomposer.mt8163.so|libgui_shim.so
 
 # TWRP COMMON
 TARGET_RECOVERY_FSTAB := $(DEVICE_BASE)/recovery.fstab
