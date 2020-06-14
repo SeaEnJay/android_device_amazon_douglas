@@ -46,3 +46,14 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 
 include $(BUILD_SHARED_LIBRARY)
+
+# Atomic
+include $(CLEAR_VARS)
+
+LOCAL_SRC_FILES := atomic/atomic_shim.cpp
+
+LOCAL_MODULE := libatomic_shim
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+
+include $(BUILD_SHARED_LIBRARY)
