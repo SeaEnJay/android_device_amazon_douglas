@@ -136,6 +136,11 @@ MALLOC_SVELTE := true
 BLOCK_BASED_OTA := false
 TARGET_OTA_ASSERT_DEVICE := douglas
 
+# Shim Symbols
+LINKER_FORCED_SHIM_LIBS := \
+    /system/lib/liblog.so|liblog_shim.so \
+    /system/lib64/liblog.so|liblog_shim.so
+
 # TWRP COMMON
 TARGET_RECOVERY_FSTAB := $(DEVICE_BASE)/recovery.fstab
 BOARD_HAS_NO_SELECT_BUTTON := true
