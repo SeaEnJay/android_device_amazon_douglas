@@ -36,9 +36,10 @@ include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := \
     gui/BufferQueue.cpp \
-    gui/GraphicBuffer.cpp
+    gui/GraphicBuffer.cpp \
+    gui/EGLAbi.cpp
 
-LOCAL_SHARED_LIBRARIES := libui libgui
+LOCAL_SHARED_LIBRARIES := libui libgui libm libc
 
 LOCAL_MODULE := libgui_shim
 LOCAL_MODULE_TAGS := optional
