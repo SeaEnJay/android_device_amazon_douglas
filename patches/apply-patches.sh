@@ -4,7 +4,7 @@ echo $1
 rootdirectory="$PWD"
 # ---------------------------------
 
-dirs="frameworks/av frameworks/native"
+dirs="frameworks/av frameworks/native system/core"
 
 # red + nocolor
 RED='\033[0;31m'

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 rootdirectory="$PWD"
-dirs="frameworks/av frameworks/native"
+dirs="frameworks/av frameworks/native system/core"
 
 for dir in $dirs ; do
 	cd $rootdirectory
