@@ -30,3 +30,18 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 
 include $(BUILD_SHARED_LIBRARY)
+
+# GUI
+include $(CLEAR_VARS)
+
+LOCAL_SRC_FILES := \
+    gui/BufferQueue.cpp \
+    gui/GraphicBuffer.cpp
+
+LOCAL_SHARED_LIBRARIES := libui libgui
+
+LOCAL_MODULE := libgui_shim
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+
+include $(BUILD_SHARED_LIBRARY)
