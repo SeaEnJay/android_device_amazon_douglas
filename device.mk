@@ -117,6 +117,10 @@ PRODUCT_PACKAGES += \
     libgui_shim \
     libatomic_shim
 
+# EGL
+PRODUCT_PACKAGES += \
+    libGLES_android
+
 # Media Extractors
 BOARD_SECCOMP_POLICY := \
     $(DEVICE_BASE)/seccomp-policy

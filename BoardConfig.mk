@@ -46,13 +46,6 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 
 TARGET_USES_64_BIT_BINDER := true
 
-# GLOBAL FLAGS
-TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
-TARGET_GLOBAL_CPPFLAGS += -DMTK_HARDWARE -mfpu=neon -mfloat-abi=softfp
-COMMON_GLOBAL_CFLAGS += -DMTK_HARDWARE -DREFRESH_RATE=60
-COMMON_GLOBAL_CFLAGS += -DAMAZON_LOG -DADD_LEGACY_ACQUIRE_BUFFER_SYMBOL
-COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
-
 # MTK Flags
 TARGET_BOARD_PLATFORM := mt8163
 BOARD_USES_MTK_AUDIO := true
@@ -141,7 +134,7 @@ LINKER_FORCED_SHIM_LIBS := \
     /system/lib/liblog.so|liblog_shim.so \
     /system/lib64/liblog.so|liblog_shim.so \
     /system/lib/libasp.so|liblog_shim.so \
-    /system/lib64/libasp.so|liblog_shim.so
+    /system/lib64/libasp.so|liblog_shim.so \
     /system/lib/libgui_ext.so|libgui_shim.so \
     /system/lib64/libgui_ext.so|libgui_shim.so \
     /system/lib/libui_ext.so|libgui_shim.so \

@@ -11,8 +11,6 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 
 include $(BUILD_SHARED_LIBRARY)
 
-LOCAL_PATH:= $(call my-dir)
-
 # Audio
 include $(CLEAR_VARS)
 
