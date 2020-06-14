@@ -14,7 +14,6 @@ bin/nvram_daemon
 bin/rpmb_svc
 bin/thermal_manager
 bin/wmt_loader
-bin/wpa_supplicant
 etc/.tp/.ht120.mtc
 etc/.tp/thermal.policy.conf
 etc/.tp/thermal.conf

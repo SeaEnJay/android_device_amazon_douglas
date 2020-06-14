@@ -83,7 +83,8 @@ PRODUCT_PACKAGES += \
 
 # Network
 PRODUCT_PACKAGES += \
-    netd
+    netd \
+    wpa_supplicant
     
 # IPv6 tethering
 PRODUCT_PACKAGES += \
