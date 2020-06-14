@@ -30,7 +30,15 @@ PRODUCT_COPY_FILES += \
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(DEVICE_BASE)/rootdir,root)
+    $(DEVICE_BASE)/rootdir/fstab.mt8163:root/fstab.mt8163 \
+    $(DEVICE_BASE)/rootdir/init.douglas.rc:root/init.douglas.rc \
+    $(DEVICE_BASE)/rootdir/init.mt8163.rc:root/init.mt8163.rc \
+    $(DEVICE_BASE)/rootdir/init.recovery.mt8163.rc:root/init.recovery.mt8163.rc \
+    $(DEVICE_BASE)/rootdir/init.mt8163.usb.rc:root/init.mt6592.usb.rc \
+    $(DEVICE_BASE)/rootdir/init.project.rc:root/root/init.project.rc \
+    $(DEVICE_BASE)/rootdir/init.ssd.rc:root/root/init.ssd.rc \
+    $(DEVICE_BASE)/rootdir/init.wifi.rc:root/root/init.wifi.rc \
+    $(DEVICE_BASE)/rootdir/ueventd.mt8163.rc:root/ueventd.mt8163.rc
 
 # Config files
 PRODUCT_COPY_FILES += \
