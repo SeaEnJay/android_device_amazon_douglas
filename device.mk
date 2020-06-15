@@ -39,7 +39,7 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_BASE)/rootdir/init.douglas.rc:root/init.douglas.rc \
     $(DEVICE_BASE)/rootdir/init.mt8163.rc:root/init.mt8163.rc \
     $(DEVICE_BASE)/rootdir/init.recovery.mt8163.rc:root/init.recovery.mt8163.rc \
-    $(DEVICE_BASE)/rootdir/init.mt8163.usb.rc:root/init.mt6592.usb.rc \
+    $(DEVICE_BASE)/rootdir/init.mt8163.usb.rc:root/init.mt8163.usb.rc \
     $(DEVICE_BASE)/rootdir/init.project.rc:root/root/init.project.rc \
     $(DEVICE_BASE)/rootdir/init.ssd.rc:root/root/init.ssd.rc \
     $(DEVICE_BASE)/rootdir/init.wifi.rc:root/root/init.wifi.rc \
