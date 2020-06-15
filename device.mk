@@ -97,7 +97,9 @@ PRODUCT_PACKAGES += \
 # Network
 PRODUCT_PACKAGES += \
     netd \
-    wpa_supplicant
+    wpa_supplicant \
+    lib_driver_cmd_mt66xx \
+    libwifi-hal-mt66xx
     
 # IPv6 tethering
 PRODUCT_PACKAGES += \
