@@ -106,6 +106,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.zygote=zygote64_32
 
+# ADB at boot
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.allow.mock.location=1 \
+    persist.sys.usb.config=mtp,adb \
+    ro.adb.secure=0 \
+    ro.secure=0 \
+    ro.allow.mock.location=1
+
 # exFAT support
 WITH_EXFAT := true
 
