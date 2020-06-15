@@ -142,7 +142,7 @@ LINKER_FORCED_SHIM_LIBS := \
     /system/lib64/hw/hwcomposer.mt8163.so|libgui_shim.so
 
 # TWRP COMMON
-TARGET_RECOVERY_FSTAB := $(DEVICE_BASE)/recovery.fstab
+TARGET_RECOVERY_FSTAB := $(DEVICE_BASE)/rootdir/etc/recovery.fstab
 BOARD_HAS_NO_SELECT_BUTTON := true
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone2/temp
 DEVICE_RESOLUTION := 800x1280
