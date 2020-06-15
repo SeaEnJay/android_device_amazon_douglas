@@ -82,7 +82,7 @@ int __metrics_log_print(int bufID, int prio, const char *tag, const char *log, .
     snprintf(dest2, 0x400, 0, 0x400);
 
     va_start(ap, log);
-    vsnprintf(s, DEST_SIZE, log, ap);
+    vsnprintf(s, LOG_BUF_SIZE, log, ap);
     va_end(ap);
 
     return __android_log_write(ANDROID_LOG_DEBUG, tag, log);
