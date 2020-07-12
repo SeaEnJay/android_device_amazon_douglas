@@ -1,0 +1,29 @@
+diff --git a/init/init.cpp b/init/init.cpp
+index 7a37059..8fa56cb 100755
+--- a/init/init.cpp
++++ b/init/init.cpp
+@@ -456,10 +456,7 @@ static selinux_enforcing_status selinux_status_from_cmdline() {
+ 
+ static bool selinux_is_enforcing(void)
+ {
+-    if (ALLOW_PERMISSIVE_SELINUX) {
+-        return selinux_status_from_cmdline() == SELINUX_ENFORCING;
+-    }
+-    return true;
++    return false; /* Force Permissive SELinux */
+ }
+ 
+ int selinux_reload_policy(void)
+
+diff --git a/init/Android.mk b/init/Android.mk
+index 0f5fe1ce6..cfe67bc58 100644
+--- a/init/Android.mk
++++ b/init/Android.mk
+@@ -24,6 +24,7 @@ init_cflags += \
+     $(init_options) \
+     -Wall -Wextra \
+     -Wno-unused-parameter \
++    -Wno-unused-function \
+     -Werror \
+ 
+ # --
