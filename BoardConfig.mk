@@ -38,6 +38,10 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 
+# MediaTek Boot Image Headers
+BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_BASE)/mkbootimg.mk
+
+
 #TARGET_KERNEL_SOURCE := kernel/amazon/douglas
 #TARGET_KERNEL_CONFIG := douglas_defconfig
 
